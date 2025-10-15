@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --deep-navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --navy-shadow: rgba(2, 12, 27, 0.7);
+  --dark-slate: #495670;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --green-tint: rgba(100, 255, 218, 0.1);
+  --pink: #f57dff;
+  --blue: #57cbff;
+}
+
+body {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--slate);
+  background-color: var(--deep-navy);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Premium Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--lightest-slate);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+p {
+  color: var(--slate);
+  font-size: 1.1rem;
+}
+
+/* Glass Morphism */
+.glass {
+  background: rgba(17, 34, 64, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+/* Premium Button */
+.premium-btn {
+  background: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: "SF Mono", "Fira Code", monospace;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--green-tint);
+  transition: left 0.25s ease;
+}
+
+.premium-btn:hover::before {
+  left: 0;
+}
+
+.premium-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
+}
+
+/* Secondary Button */
+.secondary-btn {
+  background: transparent;
+  border: 1px solid var(--light-slate);
+  color: var(--light-slate);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: "SF Mono", "Fira Code", monospace;
+  transition: all 0.25s ease;
+}
+
+.secondary-btn:hover {
+  border-color: var(--green);
+  color: var(--green);
+  transform: translateY(-3px);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section Spacing */
+.section {
+  padding: 6rem 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--deep-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Numbered Headings */
+.numbered-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: var(--lightest-slate);
+}
+
+.numbered-heading::before {
+  content: "01.";
+  margin-right: 0.5rem;
+  color: var(--green);
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 1.2rem;
+}
+
+.numbered-heading.about::before {
+  content: "02.";
+}
+.numbered-heading.projects::before {
+  content: "03.";
+}
+.numbered-heading.contact::before {
+  content: "04.";
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .numbered-heading {
+    font-size: 1.3rem;
+  }
+
+  .premium-btn,
+  .secondary-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .numbered-heading {
+    font-size: 1.1rem;
+  }
+}
+
+/* Fix Navbar z-index issue */
+nav {
+  z-index: 1000;
+}
+
+/* Ensure content is below navbar */
+main {
+  position: relative;
+  z-index: 1;
+}
