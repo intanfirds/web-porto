@@ -26,7 +26,7 @@ const Home = () => {
       image: bebasTanggunganImage,
       title: "SISFOR Bebas Tanggungan",
       description:
-        "Website ini memudahkan mahasiswa dalam mengelola dan memverifikasi dokumen administrasi akademik mereka secara online, mengurangi kebutuhan akan proses manual dan kunjungan fisik ke kantor administrasi.",
+        "Sistem informasi berbasis web untuk mengelola proses bebas tanggungan mahasiswa. Saya bertanggung jawab pada perancangan database, integrasi backend, dan otomatisasi proses verifikasi administrasi.",
       technologies: ["SQL Server", "JavaScript", "Bootstrap", "PHP"],
       github: "#",
       live: "#",
@@ -35,7 +35,7 @@ const Home = () => {
       image: tracerStudyImage,
       title: "SISFOR Tracer Study",
       description:
-        "Website ini membantu universitas dalam melacak dan menganalisis data lulusan mereka, memberikan wawasan berharga tentang jalur karir, kepuasan kerja, dan kebutuhan pengembangan kurikulum.",
+        "Sistem tracer alumni berbasis Laravel dan MySQL untuk mengumpulkan, mengelola, dan menganalisis data lulusan. Digunakan sebagai dasar laporan sebaran alumni dan evaluasi kurikulum.",
       technologies: ["Laravel", "MySQL", "Google Charts", "PHP", "EmailJS", "JavaScript"],
       github: "#",
       live: "#",
@@ -44,7 +44,7 @@ const Home = () => {
       image: k3FamilymartImage,
       title: "Web K3 Family Mart",
       description:
-        "Website ini menyediakan platform terpusat untuk mengelola dan memantau protokol keselamatan dan kesehatan di jaringan toko Family Mart, memastikan kepatuhan terhadap standar industri dan menciptakan lingkungan yang aman bagi karyawan dan pelanggan.",
+        "Sistem manajemen K3 untuk toko ritel yang memusatkan pelaporan dan pemantauan keselamatan kerja. Saat ini dikembangkan menggunakan Laravel dan JavaScript.",
       technologies: ["Laravel", "JavaScript", "PHP"],
       github: "#",
       live: "#",
@@ -112,8 +112,18 @@ const Home = () => {
               lineHeight: "1.1",
             }}
           >
-            Back End Developer enthusiast & Associate Data Scientist.
+            Back-End & Data-Driven System Developer
           </h2>
+          <p
+            style={{
+              color: "var(--green)",
+              fontFamily: "SF Mono, Fira Code, monospace",
+              fontSize: isMobile ? "0.8rem" : "0.9rem",
+              marginBottom: "1.5rem",
+            }}
+          >
+            Laravel • Database Design • Business Systems • Data Analytics
+          </p>
 
           <p
             style={{
@@ -126,10 +136,10 @@ const Home = () => {
               marginRight: isMobile ? "auto" : "0",
             }}
           >
-            Saya mengkhususkan diri dalam membangun aplikasi web yang efisien dan dapat diskalakan,
-            serta menganalisis data untuk memberikan wawasan yang dapat ditindaklanjuti. Saya
-            bersemangat menekuni teknologi dan selalu berusaha untuk belajar dan berkembang dalam
-            bidang saya.
+            Saya membangun sistem informasi berbasis Laravel dan database relasional
+            untuk mendigitalisasi proses bisnis dan mendukung pengambilan keputusan.
+            Berpengalaman dalam perancangan database, pengembangan backend,
+            serta analisis dan visualisasi data untuk sistem administrasi dan tracer alumni.
           </p>
 
           <div
@@ -327,8 +337,8 @@ const Home = () => {
                       justifyContent: isMobile
                         ? "center"
                         : index % 2 === 0
-                        ? "flex-start"
-                        : "flex-end",
+                          ? "flex-start"
+                          : "flex-end",
                     }}
                   >
                     {project.technologies.map((tech, techIndex) => (
@@ -352,8 +362,8 @@ const Home = () => {
                       justifyContent: isMobile
                         ? "center"
                         : index % 2 === 0
-                        ? "flex-start"
-                        : "flex-end",
+                          ? "flex-start"
+                          : "flex-end",
                     }}
                   >
                     <a

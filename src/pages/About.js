@@ -2,29 +2,31 @@ import React from "react";
 
 const About = () => {
   const skills = {
-    frontend: ["HTML", "CSS", "JavaScript"],
-    backend: ["PHP", "Laravel"],
-    tools: [
-      "Git & GitHub",
-      "MySQL",
-      "SQL Server",
-      "Google Colab",
-      "Postman",
-      "XAMPP",
-      "Visual Studio Code",
-      "Laragon",
-    ],
+    backend: ["PHP", "Laravel (MVC)", "MySQL", "SQL Server"],
+    database: ["ERD Design", "Normalization", "Query Optimization"],
+    data: ["Data Analysis", "Data Visualization", "Dashboard"],
+    frontend: ["HTML", "CSS", "Bootstrap"],
+    tools: ["VS Code", "GitHub", "Figma", "Power BI", "Excel", "Canva"]
   };
 
+
   const experiences = [
+    {
+      period: "2023 – 2025",
+      company: "MTs Almaarif 01 Singosari",
+      position: "Pembina Pramuka",
+      description:
+        "Melatih kepemimpinan, komunikasi, dan kerja tim siswa melalui kegiatan rutin dan proyek lapangan."
+    },
     {
       period: "Juni 2025",
       company: "BSDMP Surabaya",
       position: "Associate Data Scientist",
       description:
-        "Mengikuti program sertifikasi data scientist yang mencakup pembelajaran Python, SQL, dan alat analisis data lainnya.",
-    },
+        "Mengikuti sertifikasi BNSP bidang data science meliputi Python, SQL, analisis data, dan pemodelan data."
+    }
   ];
+
 
   return (
     <div
@@ -48,52 +50,32 @@ const About = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "3fr 2fr",
+              gridTemplateColumns: window.innerWidth < 768 ? "1fr" : "3fr 2fr",
               gap: "4rem",
               alignItems: "start",
             }}
           >
             <div>
-              <p
-                style={{
-                  fontSize: "1.1rem",
-                  lineHeight: "1.7",
-                  marginBottom: "2rem",
-                  color: "var(--slate)",
-                }}
-              >
-                Halo! Saya <span style={{ color: "var(--green)" }}>Intan Firdausi</span>, seorang
-                Developer Back End & Associate Data Analyst dengan lebih dari{" "}
-                <span style={{ color: "var(--green)" }}>2 tahun</span> dalam mengembangkan diri.
+              <p>
+                Halo! Saya <span style={{ color: "var(--green)" }}>Intan Firdausi</span>, mahasiswa
+                DIV Sistem Informasi Bisnis di Politeknik Negeri Malang dengan fokus pada
+                <span style={{ color: "var(--green)" }}> pengembangan sistem berbasis Laravel, manajemen database,
+                  dan analisis data</span>.
               </p>
 
-              <p
-                style={{
-                  fontSize: "1.1rem",
-                  lineHeight: "1.7",
-                  marginBottom: "2rem",
-                  color: "var(--slate)",
-                }}
-              >
-                Saya bersemangat menekuni teknologi modern dan mengembangkan aplikasi web yang
-                efisien. Percobaan saya dalam teknologi mulai saat saya menemukan kegembiraan saya
-                untuk menyelesaikan masalah dengan menggunakan kode, dan sekarang, saya sedang
-                belajar dan berkembang dalam pengembangan back end serta analisis data.
+              <p>
+                Saya terbiasa membangun sistem informasi berbasis web menggunakan arsitektur MVC,
+                mulai dari perancangan database (ERD & normalisasi), pembuatan fitur CRUD,
+                autentikasi, hingga pengolahan dan visualisasi data untuk kebutuhan pengambilan keputusan.
               </p>
 
-              <p
-                style={{
-                  fontSize: "1.1rem",
-                  lineHeight: "1.7",
-                  marginBottom: "2rem",
-                  color: "var(--slate)",
-                }}
-              >
-                Saat ini, saya fokus pengembangan diri pada back end dengan database seperti MongoDB
-                dan MySQL. Saya juga memiliki pengalaman dalam analisis data menggunakan Python dan
-                SQL. Saya senang bekerja dalam tim yang kolaboratif dan dinamis, serta selalu
-                bersemangat untuk belajar hal-hal baru.
+              <p>
+                Dalam berbagai proyek kampus, saya berperan sebagai Back-End Developer,
+                Database Engineer, dan Project Manager. Saya mengintegrasikan proses bisnis kampus
+                ke dalam sistem berbasis Laravel dan SQL Server/MySQL serta membangun dashboard
+                analitik sederhana untuk kebutuhan pelaporan.
               </p>
+
 
               <p
                 style={{
@@ -105,40 +87,24 @@ const About = () => {
                 Berikut adalah beberapa teknologi yang saya kuasai:
               </p>
 
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(2, 1fr)",
-                  gap: "1rem",
-                  marginTop: "2rem",
-                }}
-              >
-                {skills.tools.map((skill, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "0.5rem",
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "var(--green)",
-                        fontSize: "0.8rem",
-                      }}
-                    >
-                      ▹
-                    </span>
-                    <span
-                      style={{
-                        color: "var(--light-slate)",
-                        fontSize: "0.9rem",
-                        fontFamily: "SF Mono, Fira Code, monospace",
-                      }}
-                    >
-                      {skill}
-                    </span>
+              <div style={{ display: "grid", gridTemplateColumns: window.innerWidth < 768 ? "1fr" : "repeat(2, 1fr)", gap: "1.5rem", marginTop: "2rem" }}>
+                {Object.entries(skills).map(([category, items]) => (
+                  <div key={category}>
+                    <h4 style={{ color: "var(--green)", fontSize: "0.9rem", marginBottom: "0.5rem" }}>
+                      {category.toUpperCase()}
+                    </h4>
+                    {items.map((skill, index) => (
+                      <div key={index} style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        <span style={{ color: "var(--green)", fontSize: "0.8rem" }}>▹</span>
+                        <span style={{
+                          color: "var(--light-slate)",
+                          fontSize: "0.85rem",
+                          fontFamily: "SF Mono, Fira Code, monospace",
+                        }}>
+                          {skill}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 ))}
               </div>
@@ -262,7 +228,7 @@ const About = () => {
                       fontSize: "1rem",
                     }}
                   >
-                    Sistem Informasi • DIV
+                    D-IV Sistem Informasi Bisnis
                   </h4>
                   <p
                     style={{
@@ -270,7 +236,16 @@ const About = () => {
                       fontSize: "0.9rem",
                     }}
                   >
-                    Politeknik Negeri Malang • 2023 - Now
+                    Politeknik Negeri Malang • 2023 - Now (Sem 6)
+                  </p>
+                  <p
+                    style={{
+                      color: "var(--light-slate)",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    Fokus pada sistem informasi bisnis, analisis sistem, dan pengembangan aplikasi
+                    berbasis database serta integrasi proses bisnis.
                   </p>
                 </div>
               </div>
@@ -295,7 +270,7 @@ const About = () => {
                   gap: "1rem",
                 }}
               >
-                {["Associate Data Scientist - BSDMP Surabaya (BNSP - Komdigi)"].map(
+                {["Associate Data Scientist - BNSP (BSDMP Surabaya)"].map(
                   (cert, index) => (
                     <div
                       key={index}

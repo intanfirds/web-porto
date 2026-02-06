@@ -7,7 +7,7 @@ const Projects = () => {
       id: 1,
       title: "SISFOR Bebas Tanggungan",
       description:
-        "Website ini dibuat untuk mempermudah mahasiswa yang akan lulus dalam mengurus surat bebas tanggungan di universitas mereka. Saya berkontribusi sebagai full stack developer dan database designer.",
+        "Sistem informasi untuk proses bebas tanggungan mahasiswa. Saya bertanggung jawab pada backend, database design (ERD & normalisasi), dan otomasi alur verifikasi.",
       longDescription:
         "Website ini menyediakan platform terpusat untuk mengelola dan memantau protokol keselamatan dan kesehatan di jaringan toko Family Mart, memastikan kepatuhan terhadap standar industri dan menciptakan lingkungan yang aman bagi karyawan dan pelanggan.",
       image: "/src/assets/images/bebas_tanggungan.png",
@@ -21,7 +21,7 @@ const Projects = () => {
       id: 2,
       title: "SISFOR Tracer Study",
       description:
-        "Website ini membantu universitas dalam melacak dan menganalisis data lulusan mereka. Saya berkontribusi sebagai project manager dan back end developer.",
+        "Sistem tracer alumni berbasis Laravel & MySQL untuk mengumpulkan dan menganalisis data alumni. Saya berperan sebagai Project Manager dan Back-End Developer serta membangun dashboard sebaran alumni.",
       longDescription:
         "Website ini menyediakan platform terpusat untuk mengelola dan memantau protokol keselamatan dan kesehatan di jaringan toko Family Mart, memastikan kepatuhan terhadap standar industri dan menciptakan lingkungan yang aman bagi karyawan dan pelanggan.",
       image: "/src/assets/images/tracer_study.png",
@@ -35,7 +35,7 @@ const Projects = () => {
       id: 3,
       title: "Web K3 Family Mart",
       description:
-        "Website ini dibuat untuk mempermudah manajemen K3 di jaringan toko Family Mart. Saya berkontribusi sebagai front end developer (in progress).",
+        "Sistem K3 untuk manajemen keselamatan toko ritel. Saya berkontribusi pada pengembangan frontend dan integrasi backend.",
       longDescription:
         "This safety management system ensures compliance with occupational health and safety regulations. It features incident reporting, safety checklist automation, training module management, and real-time safety alerts for store managers and regional supervisors.",
       image: "/src/assets/images/k3_familymart.png",
@@ -47,14 +47,15 @@ const Projects = () => {
   ];
 
   const categories = [
-    "Backend",
-    "Frontend",
-    "Full Stack",
+    "Back-End Development",
+    "Database Design",
+    "System Analysis",
     "Project Management",
     "Data Analytics",
     "Data Visualization",
-    "Database Design",
+    "Laravel MVC"
   ];
+
 
   return (
     <div
@@ -84,9 +85,9 @@ const Projects = () => {
               color: "var(--slate)",
             }}
           >
-            Ini adalah daftar proyek yang saya kerjakan. Setiap proyek mewakili masalah dan
-            kesempatan untuk membuat sesuatu yang berarti yang berguna menggunakan teknologi modern
-            dan praktik terbaik.
+            Ini adalah sistem informasi dan proyek data yang saya bangun sebagai Back-End Developer,
+            Database Designer, dan Project Manager. Setiap proyek berfokus pada penyelesaian masalah bisnis
+            menggunakan Laravel, database relasional, dan analisis data.
           </p>
 
           {/* Project Stats */}
