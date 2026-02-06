@@ -136,10 +136,10 @@ const Home = () => {
               marginRight: isMobile ? "auto" : "0",
             }}
           >
-            Saya membangun sistem informasi berbasis Laravel dan database relasional
-            untuk mendigitalisasi proses bisnis dan mendukung pengambilan keputusan.
-            Berpengalaman dalam perancangan database, pengembangan backend,
-            serta analisis dan visualisasi data untuk sistem administrasi dan tracer alumni.
+            Saya membangun sistem informasi berbasis Laravel dan database relasional untuk
+            mendigitalisasi proses bisnis dan mendukung pengambilan keputusan. Berpengalaman dalam
+            perancangan database, pengembangan backend, serta analisis dan visualisasi data untuk
+            sistem administrasi dan tracer alumni.
           </p>
 
           <div
@@ -337,8 +337,8 @@ const Home = () => {
                       justifyContent: isMobile
                         ? "center"
                         : index % 2 === 0
-                          ? "flex-start"
-                          : "flex-end",
+                        ? "flex-start"
+                        : "flex-end",
                     }}
                   >
                     {project.technologies.map((tech, techIndex) => (
@@ -362,8 +362,8 @@ const Home = () => {
                       justifyContent: isMobile
                         ? "center"
                         : index % 2 === 0
-                          ? "flex-start"
-                          : "flex-end",
+                        ? "flex-start"
+                        : "flex-end",
                     }}
                   >
                     <a

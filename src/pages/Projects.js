@@ -53,9 +53,8 @@ const Projects = () => {
     "Project Management",
     "Data Analytics",
     "Data Visualization",
-    "Laravel MVC"
+    "Laravel MVC",
   ];
-
 
   return (
     <div
@@ -86,8 +85,8 @@ const Projects = () => {
             }}
           >
             Ini adalah sistem informasi dan proyek data yang saya bangun sebagai Back-End Developer,
-            Database Designer, dan Project Manager. Setiap proyek berfokus pada penyelesaian masalah bisnis
-            menggunakan Laravel, database relasional, dan analisis data.
+            Database Designer, dan Project Manager. Setiap proyek berfokus pada penyelesaian masalah
+            bisnis menggunakan Laravel, database relasional, dan analisis data.
           </p>
 
           {/* Project Stats */}

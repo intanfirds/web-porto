@@ -6,9 +6,8 @@ const About = () => {
     database: ["ERD Design", "Normalization", "Query Optimization"],
     data: ["Data Analysis", "Data Visualization", "Dashboard"],
     frontend: ["HTML", "CSS", "Bootstrap"],
-    tools: ["VS Code", "GitHub", "Figma", "Power BI", "Excel", "Canva"]
+    tools: ["VS Code", "GitHub", "Figma", "Power BI", "Excel", "Canva"],
   };
-
 
   const experiences = [
     {
@@ -16,17 +15,16 @@ const About = () => {
       company: "MTs Almaarif 01 Singosari",
       position: "Pembina Pramuka",
       description:
-        "Melatih kepemimpinan, komunikasi, dan kerja tim siswa melalui kegiatan rutin dan proyek lapangan."
+        "Melatih kepemimpinan, komunikasi, dan kerja tim siswa melalui kegiatan rutin dan proyek lapangan.",
     },
     {
       period: "Juni 2025",
       company: "BSDMP Surabaya",
       position: "Associate Data Scientist",
       description:
-        "Mengikuti sertifikasi BNSP bidang data science meliputi Python, SQL, analisis data, dan pemodelan data."
-    }
+        "Mengikuti sertifikasi BNSP bidang data science meliputi Python, SQL, analisis data, dan pemodelan data.",
+    },
   ];
-
 
   return (
     <div
@@ -59,23 +57,26 @@ const About = () => {
               <p>
                 Halo! Saya <span style={{ color: "var(--green)" }}>Intan Firdausi</span>, mahasiswa
                 DIV Sistem Informasi Bisnis di Politeknik Negeri Malang dengan fokus pada
-                <span style={{ color: "var(--green)" }}> pengembangan sistem berbasis Laravel, manajemen database,
-                  dan analisis data</span>.
+                <span style={{ color: "var(--green)" }}>
+                  {" "}
+                  pengembangan sistem berbasis Laravel, manajemen database, dan analisis data
+                </span>
+                .
               </p>
 
               <p>
                 Saya terbiasa membangun sistem informasi berbasis web menggunakan arsitektur MVC,
                 mulai dari perancangan database (ERD & normalisasi), pembuatan fitur CRUD,
-                autentikasi, hingga pengolahan dan visualisasi data untuk kebutuhan pengambilan keputusan.
+                autentikasi, hingga pengolahan dan visualisasi data untuk kebutuhan pengambilan
+                keputusan.
               </p>
 
               <p>
-                Dalam berbagai proyek kampus, saya berperan sebagai Back-End Developer,
-                Database Engineer, dan Project Manager. Saya mengintegrasikan proses bisnis kampus
-                ke dalam sistem berbasis Laravel dan SQL Server/MySQL serta membangun dashboard
-                analitik sederhana untuk kebutuhan pelaporan.
+                Dalam berbagai proyek kampus, saya berperan sebagai Back-End Developer, Database
+                Engineer, dan Project Manager. Saya mengintegrasikan proses bisnis kampus ke dalam
+                sistem berbasis Laravel dan SQL Server/MySQL serta membangun dashboard analitik
+                sederhana untuk kebutuhan pelaporan.
               </p>
-
 
               <p
                 style={{
@@ -87,20 +88,34 @@ const About = () => {
                 Berikut adalah beberapa teknologi yang saya kuasai:
               </p>
 
-              <div style={{ display: "grid", gridTemplateColumns: window.innerWidth < 768 ? "1fr" : "repeat(2, 1fr)", gap: "1.5rem", marginTop: "2rem" }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: window.innerWidth < 768 ? "1fr" : "repeat(2, 1fr)",
+                  gap: "1.5rem",
+                  marginTop: "2rem",
+                }}
+              >
                 {Object.entries(skills).map(([category, items]) => (
                   <div key={category}>
-                    <h4 style={{ color: "var(--green)", fontSize: "0.9rem", marginBottom: "0.5rem" }}>
+                    <h4
+                      style={{ color: "var(--green)", fontSize: "0.9rem", marginBottom: "0.5rem" }}
+                    >
                       {category.toUpperCase()}
                     </h4>
                     {items.map((skill, index) => (
-                      <div key={index} style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                      <div
+                        key={index}
+                        style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                      >
                         <span style={{ color: "var(--green)", fontSize: "0.8rem" }}>▹</span>
-                        <span style={{
-                          color: "var(--light-slate)",
-                          fontSize: "0.85rem",
-                          fontFamily: "SF Mono, Fira Code, monospace",
-                        }}>
+                        <span
+                          style={{
+                            color: "var(--light-slate)",
+                            fontSize: "0.85rem",
+                            fontFamily: "SF Mono, Fira Code, monospace",
+                          }}
+                        >
                           {skill}
                         </span>
                       </div>
@@ -270,28 +285,26 @@ const About = () => {
                   gap: "1rem",
                 }}
               >
-                {["Associate Data Scientist - BNSP (BSDMP Surabaya)"].map(
-                  (cert, index) => (
-                    <div
-                      key={index}
+                {["Associate Data Scientist - BNSP (BSDMP Surabaya)"].map((cert, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    <span style={{ color: "var(--green)" }}>✓</span>
+                    <span
                       style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.5rem",
+                        color: "var(--light-slate)",
+                        fontSize: "0.9rem",
                       }}
                     >
-                      <span style={{ color: "var(--green)" }}>✓</span>
-                      <span
-                        style={{
-                          color: "var(--light-slate)",
-                          fontSize: "0.9rem",
-                        }}
-                      >
-                        {cert}
-                      </span>
-                    </div>
-                  )
-                )}
+                      {cert}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
