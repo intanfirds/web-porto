@@ -5,8 +5,8 @@ const About = () => {
     "Back-End": ["Laravel (MVC, Blade, Eloquent ORM)", "PHP"],
     Database: ["MySQL", "SQL Server", "ERD & Normalisasi", "Query Optimization"],
     "Data & BI": ["Power BI", "Data Analysis", "Data Visualization", "Excel"],
-    Frontend: ["HTML", "CSS", "Bootstrap"],
     Mobile: ["Flutter", "Dart"],
+    Frontend: ["HTML", "CSS", "Bootstrap"],
     Tools: ["VS Code", "GitHub", "Figma", "Canva"],
   };
 
@@ -300,9 +300,9 @@ const About = () => {
             >
               {[
                 "Back End Programmer",
-                "Database Administrator",
                 "Data Analyst",
                 "Data Scientist",
+                "Database Administrator",
                 "BI Developer",
                 "System Analyst",
               ].map((bidang, index) => (

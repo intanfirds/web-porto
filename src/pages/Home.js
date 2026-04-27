@@ -135,7 +135,7 @@ const Home = () => {
               marginBottom: "1.5rem",
             }}
           >
-            Laravel • MySQL / SQL Server • Power BI • Flutter • Data Analytics
+            Laravel • MySQL / SQL Server • Power BI • Data Analytics
           </p>
 
           <p

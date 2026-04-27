@@ -29,8 +29,8 @@ const Contact = () => {
               color: "var(--slate)",
             }}
           >
-            Saya sedang bekerja untuk freelance dan pekerjaan penuh waktu. Apakah Anda memiliki
-            proyek yang ingin saya bantu? Saya akan sangat senang mendengarkan Anda!
+            Saya sedang mencari kesempatan magang. Apakah Anda memiliki
+            proyek yang ingin saya bantu? Saya akan sangat senang bergabung dengan anda!
           </p>
 
           <div
@@ -296,7 +296,7 @@ const Contact = () => {
                   textAlign: "center",
                 }}
               >
-                Saya terbuka untuk peluang freelance dan pekerjaan penuh waktu. Jangan ragu untuk
+                Saya terbuka untuk peluang magang, freelance dan pekerjaan penuh waktu. Jangan ragu untuk
                 menghubungi saya melalui email atau WhatsApp.
               </p>
 
