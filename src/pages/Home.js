@@ -26,28 +26,28 @@ const Home = () => {
       image: bebasTanggunganImage,
       title: "SISFOR Bebas Tanggungan",
       description:
-        "Sistem informasi berbasis web untuk mengelola proses bebas tanggungan mahasiswa. Saya bertanggung jawab pada perancangan database, integrasi backend, dan otomatisasi proses verifikasi administrasi.",
-      technologies: ["SQL Server", "JavaScript", "Bootstrap", "PHP"],
-      github: "#",
-      live: "#",
+        "Sistem informasi berbasis web untuk mengelola proses bebas tanggungan mahasiswa. Bertanggung jawab pada perancangan database (ERD & normalisasi), fitur upload & verifikasi dokumen, dan otomasi alur approval administrasi.",
+      technologies: ["PHP", "SQL Server", "Bootstrap", "JavaScript"],
+      github: "https://github.com/intanfirds/Empati-Bebas-Tanggungan",
+      live: "https://drive.google.com/file/d/1_emwg36BbBlYU9RmNOcexjazXBM1u7l4/view?usp=sharing",
     },
     {
       image: tracerStudyImage,
       title: "SISFOR Tracer Study",
       description:
-        "Sistem tracer alumni berbasis Laravel dan MySQL untuk mengumpulkan, mengelola, dan menganalisis data lulusan. Digunakan sebagai dasar laporan sebaran alumni dan evaluasi kurikulum.",
+        "Sistem tracer alumni berbasis Laravel dan MySQL. Berperan sebagai Project Manager & Back-End Developer. Membangun dashboard grafik sebaran alumni (profesi, instansi, masa tunggu kerja) dan autentikasi pengguna.",
       technologies: ["Laravel", "MySQL", "Google Charts", "PHP", "EmailJS", "JavaScript"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/intanfirds/tracer_study",
+      live: "https://vercel-deploy-tracer-landing.vercel.app/",
     },
     {
       image: k3FamilymartImage,
       title: "Web K3 Family Mart",
       description:
-        "Sistem manajemen K3 untuk toko ritel yang memusatkan pelaporan dan pemantauan keselamatan kerja. Saat ini dikembangkan menggunakan Laravel dan JavaScript.",
+        "Sistem manajemen K3 untuk toko ritel yang memusatkan pelaporan dan pemantauan keselamatan kerja. Berkontribusi pada data preparation dan pengolahan data untuk kebutuhan pengembangan sistem.",
       technologies: ["Laravel", "JavaScript", "PHP"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/intanfirds/websiteK3",
+      live: null,
     },
   ];
 
@@ -57,7 +57,7 @@ const Home = () => {
         minHeight: "100vh",
         background: "var(--deep-navy)",
         color: "var(--slate)",
-        paddingTop: isMobile ? "70px" : "80px", // Adjusted for mobile
+        paddingTop: isMobile ? "70px" : "80px",
       }}
     >
       {/* Hero Section */}
@@ -105,15 +105,28 @@ const Home = () => {
 
           <h2
             style={{
-              fontSize: isMobile ? "clamp(1.5rem, 6vw, 2.5rem)" : "clamp(2.5rem, 6vw, 4rem)",
+              fontSize: isMobile ? "clamp(1.5rem, 6vw, 2.5rem)" : "clamp(2rem, 5vw, 3.5rem)",
               fontWeight: "600",
               color: "var(--light-slate)",
-              marginBottom: "1.5rem",
+              marginBottom: "1rem",
               lineHeight: "1.1",
             }}
           >
-            Back-End & Data-Driven System Developer
+            Back-End Developer & Data Enthusiast
           </h2>
+
+          <p
+            style={{
+              color: "var(--green)",
+              fontFamily: "SF Mono, Fira Code, monospace",
+              fontSize: isMobile ? "0.75rem" : "0.85rem",
+              marginBottom: "0.75rem",
+              opacity: 0.8,
+            }}
+          >
+            🔍 Mencari Kesempatan Magang
+          </p>
+
           <p
             style={{
               color: "var(--green)",
@@ -122,24 +135,25 @@ const Home = () => {
               marginBottom: "1.5rem",
             }}
           >
-            Laravel • Database Design • Business Systems • Data Analytics
+            Laravel • MySQL / SQL Server • Power BI • Flutter • Data Analytics
           </p>
 
           <p
             style={{
-              fontSize: isMobile ? "1rem" : "1.2rem",
-              lineHeight: "1.6",
-              maxWidth: isMobile ? "100%" : "540px",
+              fontSize: isMobile ? "1rem" : "1.15rem",
+              lineHeight: "1.7",
+              maxWidth: isMobile ? "100%" : "560px",
               marginBottom: isMobile ? "2rem" : "3rem",
               color: "var(--slate)",
               marginLeft: isMobile ? "auto" : "0",
               marginRight: isMobile ? "auto" : "0",
             }}
           >
-            Saya membangun sistem informasi berbasis Laravel dan database relasional untuk
-            mendigitalisasi proses bisnis dan mendukung pengambilan keputusan. Berpengalaman dalam
-            perancangan database, pengembangan backend, serta analisis dan visualisasi data untuk
-            sistem administrasi dan tracer alumni.
+            Mahasiswa semester 6 D4 Sistem Informasi Bisnis di Politeknik Negeri Malang. Berpengalaman
+            membangun sistem informasi berbasis Laravel, merancang database relasional, dan mengolah
+            data menggunakan Power BI. Tersertifikasi{" "}
+            <span style={{ color: "var(--green)" }}>Associate Data Scientist</span> melalui
+            Digital Talent Scholarship Komdigi 2025.
           </p>
 
           <div
@@ -177,13 +191,7 @@ const Home = () => {
         </div>
 
         {/* Profile Image */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <div
             style={{
               width: isMobile ? "250px" : "300px",
@@ -202,7 +210,7 @@ const Home = () => {
             >
               <img
                 src={profileImage}
-                alt="Profile"
+                alt="Intan Firdausi"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -223,12 +231,7 @@ const Home = () => {
           padding: isMobile ? "3rem 1rem" : "6rem 2rem",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-          }}
-        >
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div
             className="numbered-heading projects"
             style={{
@@ -239,12 +242,7 @@ const Home = () => {
             Some Things I&apos;ve Built
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gap: isMobile ? "2rem" : "4rem",
-            }}
-          >
+          <div style={{ display: "grid", gap: isMobile ? "2rem" : "4rem" }}>
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -366,42 +364,41 @@ const Home = () => {
                         : "flex-end",
                     }}
                   >
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        color: "var(--lightest-slate)",
-                        textDecoration: "none",
-                        fontSize: isMobile ? "1.3rem" : "1.5rem",
-                      }}
-                    >
-                      📁
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        color: "var(--lightest-slate)",
-                        textDecoration: "none",
-                        fontSize: isMobile ? "1.3rem" : "1.5rem",
-                      }}
-                    >
-                      🔗
-                    </a>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          color: "var(--lightest-slate)",
+                          textDecoration: "none",
+                          fontSize: isMobile ? "1.3rem" : "1.5rem",
+                        }}
+                      >
+                        📁
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          color: "var(--lightest-slate)",
+                          textDecoration: "none",
+                          fontSize: isMobile ? "1.3rem" : "1.5rem",
+                        }}
+                      >
+                        🔗
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div
-            style={{
-              textAlign: "center",
-              marginTop: isMobile ? "2rem" : "4rem",
-            }}
-          >
+          <div style={{ textAlign: "center", marginTop: isMobile ? "2rem" : "4rem" }}>
             <Link
               to="/projects"
               className="premium-btn"

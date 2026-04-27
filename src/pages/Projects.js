@@ -1,59 +1,101 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 
+// Import images
+import bebasTanggunganImage from "../assets/images/bebas_tanggungan.png";
+import tracerStudyImage from "../assets/images/tracer_study.png";
+import k3FamilymartImage from "../assets/images/k3_familymart.png";
+import hrisImage from "../assets/images/hris.jpeg";
+import filmImage from "../assets/images/film.png";
+
 const Projects = () => {
   const allProjects = [
     {
       id: 1,
       title: "SISFOR Bebas Tanggungan",
       description:
-        "Sistem informasi untuk proses bebas tanggungan mahasiswa. Saya bertanggung jawab pada backend, database design (ERD & normalisasi), dan otomasi alur verifikasi.",
+        "Sistem informasi untuk proses bebas tanggungan mahasiswa. Bertanggung jawab pada backend, database design (ERD & normalisasi), fitur upload & verifikasi dokumen, dan otomasi alur approval administrasi.",
       longDescription:
-        "Website ini menyediakan platform terpusat untuk mengelola dan memantau protokol keselamatan dan kesehatan di jaringan toko Family Mart, memastikan kepatuhan terhadap standar industri dan menciptakan lingkungan yang aman bagi karyawan dan pelanggan.",
-      image: "/src/assets/images/bebas_tanggungan.png",
-      technologies: ["PHP", "SQL Server", "JavaScript", "Bootstrap", "PHP"],
+        "Sistem web yang dikembangkan untuk mengelola proses bebas tanggungan mahasiswa secara digital. Mencakup perancangan database relasional lengkap, fitur upload dokumen dengan validasi, alur approval bertingkat (diterima/ditolak), dan integrasi backend dengan antarmuka pengguna agar proses administrasi berjalan otomatis dan transparan.",
+      image: bebasTanggunganImage,
+      technologies: ["PHP", "SQL Server", "Bootstrap", "JavaScript"],
       githubUrl: "https://github.com/intanfirds/Empati-Bebas-Tanggungan",
       liveUrl: "https://drive.google.com/file/d/1_emwg36BbBlYU9RmNOcexjazXBM1u7l4/view?usp=sharing",
       category: "Full Stack",
       featured: true,
+      period: "Sep 2024 – Des 2024",
     },
     {
       id: 2,
       title: "SISFOR Tracer Study",
       description:
-        "Sistem tracer alumni berbasis Laravel & MySQL untuk mengumpulkan dan menganalisis data alumni. Saya berperan sebagai Project Manager dan Back-End Developer serta membangun dashboard sebaran alumni.",
+        "Sistem tracer alumni berbasis Laravel & MySQL. Berperan sebagai Project Manager & Back-End Developer, membangun dashboard grafik sebaran alumni (profesi, instansi, masa tunggu kerja) dan autentikasi pengguna.",
       longDescription:
-        "Website ini menyediakan platform terpusat untuk mengelola dan memantau protokol keselamatan dan kesehatan di jaringan toko Family Mart, memastikan kepatuhan terhadap standar industri dan menciptakan lingkungan yang aman bagi karyawan dan pelanggan.",
-      image: "/src/assets/images/tracer_study.png",
+        "Aplikasi web yang dikembangkan untuk mengumpulkan, mengelola, dan menganalisis data alumni. Menggunakan Eloquent ORM & Controller Laravel untuk mengelola logika bisnis dan relasi data. Fitur utama: autentikasi pengguna, form input alumni, dashboard grafik interaktif, dan laporan sebaran alumni untuk evaluasi kurikulum.",
+      image: tracerStudyImage,
       technologies: ["Laravel", "MySQL", "Google Charts", "PHP", "EmailJS", "JavaScript"],
       githubUrl: "https://github.com/intanfirds/tracer_study",
       liveUrl: "https://vercel-deploy-tracer-landing.vercel.app/",
       category: "Data Analytics",
       featured: true,
+      period: "Mar 2025 – Jun 2025",
     },
     {
       id: 3,
       title: "Web K3 Family Mart",
       description:
-        "Sistem K3 untuk manajemen keselamatan toko ritel. Saya berkontribusi pada pengembangan frontend dan integrasi backend.",
+        "Sistem K3 untuk manajemen keselamatan toko ritel Family Mart. Berkontribusi pada data preparation dan pengolahan data untuk kebutuhan pengembangan sistem K3.",
       longDescription:
-        "This safety management system ensures compliance with occupational health and safety regulations. It features incident reporting, safety checklist automation, training module management, and real-time safety alerts for store managers and regional supervisors.",
-      image: "/src/assets/images/k3_familymart.png",
+        "Website yang memusatkan pelaporan dan pemantauan keselamatan dan kesehatan kerja di jaringan toko Family Mart. Berkontribusi dalam penyiapan dan pengolahan data untuk kebutuhan pengembangan sistem, memastikan kepatuhan terhadap standar K3 industri ritel.",
+      image: k3FamilymartImage,
       technologies: ["Laravel", "JavaScript", "PHP"],
       githubUrl: "https://github.com/intanfirds/websiteK3",
-      category: "Frontend",
+      liveUrl: null,
+      category: "Back-End",
       featured: true,
+      period: "Sep 2025 – Okt 2025",
+    },
+    {
+      id: 4,
+      title: "Aplikasi Mobile HRIS — Modul Letter",
+      description:
+        "Fitur laporan seluruh letter karyawan dan Fitur Balasan pada aplikasi mobile HRIS berbasis Flutter. Mengerjakan front-end (UI Flutter/Dart), back-end (logika bisnis), dan desain database untuk modul letter.",
+      longDescription:
+        "Modul letter pada aplikasi mobile HRIS yang dikembangkan dalam proyek kelompok menggunakan Flutter. Mencakup pengelolaan dan pelaporan berbagai jenis surat karyawan dalam lingkungan perusahaan. Mengerjakan keseluruhan stack: UI/UX Flutter/Dart, logika bisnis back-end, dan perancangan skema database untuk modul.",
+      image: hrisImage,
+      technologies: ["Flutter", "Dart"],
+      githubUrl: "https://github.com/Huseinfa/pbl",
+      liveUrl: null,
+      category: "Mobile",
+      featured: false,
+      period: "Nov 2025 – Des 2025",
+    },
+    {
+      id: 5,
+      title: "Sistem Rekomendasi Film (Masih dalam pengembangan)",
+      description:
+        "Website sistem rekomendasi film menggunakan pendekatan hybrid: Content-Based Filtering (CBF), Naïve Bayes, dan Simple Additive Weighting (SAW). Bertanggung jawab pada back-end dan pengolahan data.",
+      longDescription:
+        "Sistem rekomendasi film yang menggabungkan tiga metode untuk menghasilkan rekomendasi yang lebih akurat. Content-Based Filtering untuk kemiripan konten, Naïve Bayes (Teorem Bayes) untuk probabilitas preferensi pengguna, dan Simple Additive Weighting (SAW) untuk pembobotan kriteria. Bertanggung jawab pada pengembangan back-end dan implementasi ketiga algoritma rekomendasi.",
+      image: filmImage,
+      technologies: ["PHP", "JavaScript", "MySQL", "CBF", "Naïve Bayes", "SAW"],
+      githubUrl: null,
+      liveUrl: null,
+      category: "Data Analytics",
+      featured: false,
+      period: "Mar 2025 – Sekarang",
     },
   ];
 
   const categories = [
-    "Back-End Development",
-    "Database Design",
-    "System Analysis",
-    "Project Management",
-    "Data Analytics",
-    "Data Visualization",
-    "Laravel MVC",
+    "Back-End Developer",
+    "Database Engineer",
+    "Project Manager",
+    "Full Stack Developer",
+    "Mobile Developer (Flutter)",
+    "Data Analyst",
+    "BI Developer",
+    "System Analyst",
   ];
 
   return (
@@ -65,12 +107,7 @@ const Projects = () => {
         padding: "100px 2rem 2rem 2rem",
       }}
     >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         {/* Header Section */}
         <section style={{ padding: "4rem 0" }}>
           <div className="numbered-heading projects">My Projects</div>
@@ -84,9 +121,10 @@ const Projects = () => {
               color: "var(--slate)",
             }}
           >
-            Ini adalah sistem informasi dan proyek data yang saya bangun sebagai Back-End Developer,
-            Database Designer, dan Project Manager. Setiap proyek berfokus pada penyelesaian masalah
-            bisnis menggunakan Laravel, database relasional, dan analisis data.
+            Sistem informasi, aplikasi mobile, dan proyek data yang saya bangun sebagai
+            Back-End Developer, Database Engineer, Project Manager, dan Full Stack Mobile Developer.
+            Setiap proyek berfokus pada penyelesaian masalah bisnis menggunakan Laravel, database
+            relasional, Flutter, dan analisis data.
           </p>
 
           {/* Project Stats */}
@@ -98,13 +136,7 @@ const Projects = () => {
               marginBottom: "4rem",
             }}
           >
-            <div
-              className="glass"
-              style={{
-                padding: "1.5rem",
-                textAlign: "center",
-              }}
-            >
+            <div className="glass" style={{ padding: "1.5rem", textAlign: "center" }}>
               <div
                 style={{
                   fontSize: "2.5rem",
@@ -118,13 +150,7 @@ const Projects = () => {
               <div style={{ color: "var(--light-slate)" }}>Projects Completed</div>
             </div>
 
-            <div
-              className="glass"
-              style={{
-                padding: "1.5rem",
-                textAlign: "center",
-              }}
-            >
+            <div className="glass" style={{ padding: "1.5rem", textAlign: "center" }}>
               <div
                 style={{
                   fontSize: "2.5rem",
@@ -138,13 +164,7 @@ const Projects = () => {
               <div style={{ color: "var(--light-slate)" }}>Years Experience</div>
             </div>
 
-            <div
-              className="glass"
-              style={{
-                padding: "1.5rem",
-                textAlign: "center",
-              }}
-            >
+            <div className="glass" style={{ padding: "1.5rem", textAlign: "center" }}>
               <div
                 style={{
                   fontSize: "2.5rem",
@@ -159,27 +179,32 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* Category Filters */}
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "1rem",
-              marginBottom: "3rem",
-            }}
-          >
-            <div>Peran yang pernah saya kerjakan:</div>
+          {/* Role Badges */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginBottom: "3rem" }}>
+            <div
+              style={{
+                color: "var(--light-slate)",
+                fontSize: "0.9rem",
+                alignSelf: "center",
+                marginRight: "0.5rem",
+              }}
+            >
+              Peran yang pernah saya kerjakan:
+            </div>
             {categories.map((category) => (
-              <button
+              <span
                 key={category}
-                className="secondary-btn"
                 style={{
-                  padding: "0.8rem 1.5rem",
-                  fontSize: "0.9rem",
+                  border: "1px solid var(--green)",
+                  color: "var(--green)",
+                  padding: "0.4rem 1rem",
+                  borderRadius: "20px",
+                  fontSize: "0.8rem",
+                  fontFamily: "SF Mono, Fira Code, monospace",
                 }}
               >
                 {category}
-              </button>
+              </span>
             ))}
           </div>
         </section>
@@ -200,12 +225,7 @@ const Projects = () => {
         </section>
 
         {/* Call to Action */}
-        <section
-          style={{
-            textAlign: "center",
-            padding: "6rem 0",
-          }}
-        >
+        <section style={{ textAlign: "center", padding: "6rem 0" }}>
           <h2
             style={{
               fontSize: "2rem",
@@ -224,8 +244,8 @@ const Projects = () => {
               margin: "0 auto 2rem auto",
             }}
           >
-            Jangan ragu untuk menghubungi saya untuk mendiskusikan proyek Anda atau hanya untuk
-            mengatakan halo!
+            Saya sedang mencari kesempatan magang. Jangan ragu untuk menghubungi saya untuk
+            mendiskusikan proyek atau peluang kolaborasi!
           </p>
           <a href="mailto:intanfir27@gmail.com" className="premium-btn">
             Get In Touch

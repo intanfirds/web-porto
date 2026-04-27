@@ -1,25 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Import images
-import bebasTanggunganImage from "../assets/images/bebas_tanggungan.png";
-import tracerStudyImage from "../assets/images/tracer_study.png";
-import k3FamilymartImage from "../assets/images/k3_familymart.png";
-
 const ProjectCard = ({ project }) => {
-  const getProjectImage = (title) => {
-    switch (title) {
-      case "SISFOR Bebas Tanggungan":
-        return bebasTanggunganImage;
-      case "SISFOR Tracer Study":
-        return tracerStudyImage;
-      case "Web K3 Family Mart":
-        return k3FamilymartImage;
-      default:
-        return bebasTanggunganImage;
-    }
-  };
-
   return (
     <div
       className="glass"
@@ -40,7 +22,7 @@ const ProjectCard = ({ project }) => {
         }}
       >
         <img
-          src={getProjectImage(project.title)}
+          src={project.image}
           alt={project.title}
           style={{
             width: "100%",
@@ -140,36 +122,40 @@ const ProjectCard = ({ project }) => {
             marginTop: "auto",
           }}
         >
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="secondary-btn"
-            style={{
-              padding: "0.7rem 1.2rem",
-              fontSize: "0.8rem",
-              textDecoration: "none",
-              flex: 1,
-              textAlign: "center",
-            }}
-          >
-            View Code
-          </a>
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="premium-btn"
-            style={{
-              padding: "0.7rem 1.2rem",
-              fontSize: "0.8rem",
-              textDecoration: "none",
-              flex: 1,
-              textAlign: "center",
-            }}
-          >
-            Live Demo
-          </a>
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="secondary-btn"
+              style={{
+                padding: "0.7rem 1.2rem",
+                fontSize: "0.8rem",
+                textDecoration: "none",
+                flex: 1,
+                textAlign: "center",
+              }}
+            >
+              View Code
+            </a>
+          )}
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="premium-btn"
+              style={{
+                padding: "0.7rem 1.2rem",
+                fontSize: "0.8rem",
+                textDecoration: "none",
+                flex: 1,
+                textAlign: "center",
+              }}
+            >
+              Live Demo
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -181,9 +167,10 @@ ProjectCard.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    image: PropTypes.string,
     technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    githubUrl: PropTypes.string.isRequired,
-    liveUrl: PropTypes.string.isRequired,
+    githubUrl: PropTypes.string,
+    liveUrl: PropTypes.string,
     category: PropTypes.string.isRequired,
     featured: PropTypes.bool,
   }).isRequired,
